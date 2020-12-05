@@ -1,0 +1,20 @@
+﻿Microsoft.EntityFrameworkCore.Design
+Microsoft.EntityFrameworkCore.Tools
+Microsoft.EntityFrameworkCore.Proxies
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.Extensions.Configuration (Autofac Configuration icin)
+Autofac.Extensions.DependencyInjection(Populate icin)
+
+****************************************************
+
+* EntityFramework.Design ile ilgili kütüphane isteginde su sekilde de davranılabilir
+https://stackoverflow.com/questions/52536588/your-startup-project-doesnt-reference-microsoft-entityframeworkcore-design
+
+
+I found the solution here: http://obscureproblemsandgotchas.com/development/c/dotnet-core-ef-migration-not-working/
+
+In short, edit your csproj file, and add to your PropertyGroup section following entry:
+
+<GenerateRuntimeConfigurationFiles>True</GenerateRuntimeConfigurationFiles>
+
+*******************************************************************
